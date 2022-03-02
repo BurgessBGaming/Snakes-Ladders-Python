@@ -1,0 +1,36 @@
+Version 1.0.0 - March 2, 2022
+
+- Official release
+
+- Added Basic Gamemode
+
+- Added Boards 1-3
+
+- Added player AI
+
+- Added Plus Apple Item
+
+- Added Golden Plus Apple Item
+
+- Added Minus Pear Item
+
+- Added Golden Minus Pear Item
+
+- Added Extra Die Item
+
+- Added Selection Die Item
+
+- Added Swap Box Item
+
+- Added Great Snake Item
+
+- Added God Snake Item
+
+- Added Double-or-Nothing Die Item
+
+- Added Magic Ladder Item
+
+- Added Ultimate Fate Item
+- Added Shameless Plug
+- Removed Xx_T0MAH4WK_xX
+___________________________________________________________
