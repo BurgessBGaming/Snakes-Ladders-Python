@@ -1526,9 +1526,9 @@ def P2DiceRoll():
             elif p2_status == 'Double':
                 dice_roll *= 2
                 p2_status = ''
-            elif p1_status == 'Half':
+            elif p2_status == 'Half':
                 dice_roll //= 2
-                p1_status = ''
+                p2_status = ''
             print('Player 2 moves', dice_roll, 'spaces!')
             player2pos += dice_roll
             time.sleep(1)
@@ -2223,8 +2223,8 @@ def P3DiceRoll():
             dice_roll += ex_dice_roll
             p3_status = ''
             time.sleep(1)
-        elif p3_status == 'Double':
-            dice_roll *= 2
+        elif p3_status == 'Half':
+            dice_roll //= 2
             p3_status = ''
         print('Player 3 moves', dice_roll, 'spaces!')
         player3pos += dice_roll
@@ -2263,6 +2263,9 @@ def P3DiceRoll():
                 time.sleep(1)
             elif p3_status == 'Double':
                 dice_roll *= 2
+                p3_status = ''
+            elif p3_status == 'Half':
+                dice_roll //= 2
                 p3_status = ''
             print('Player 3 moves', dice_roll, 'spaces!')
             player3pos += dice_roll
@@ -2961,6 +2964,9 @@ def P4DiceRoll():
         elif p4_status == 'Double':
             dice_roll *= 2
             p4_status = ''
+        elif p4_status == 'Half':
+            dice_roll //= 2
+            p4_status = ''
         print('Player 4 moves', dice_roll, 'spaces!')
         player4pos += dice_roll
         time.sleep(1)
@@ -2998,6 +3004,9 @@ def P4DiceRoll():
                 time.sleep(1)
             elif p4_status == 'Double':
                 dice_roll *= 2
+                p4_status = ''
+            elif p4_status == 'Half':
+                dice_roll //= 2
                 p4_status = ''
             print('Player 4 moves', dice_roll, 'spaces!')
             player4pos += dice_roll
