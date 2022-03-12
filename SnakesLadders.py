@@ -45,7 +45,7 @@ def titleScreen():
     print('|  /---/                           \  /    |')
     print('| /---/         L A D D E R S      / /     |')
     print(' ------------------------------------------')
-    print('                 Ver. 1.0.0               ')
+    print('                 Ver. 1.1.0               ')
     time.sleep(2)
     print('')
     input('            Press Enter to Begin          ')
@@ -742,7 +742,7 @@ def P1DiceRoll():
             print('Double Roll Ready!')
     if dice != 'Single' or dice != 'Double' or dice != 'Item':
         dice = input('Single/Double/Item: ')
-    if dice == 'Single':
+    if dice.lower() == 'single':
         dice_roll = random.choice(range(1, 7))
         print('The die rolled', dice_roll)
         time.sleep(1)
@@ -780,7 +780,7 @@ def P1DiceRoll():
         if double_meter1 > double_meter_cap:
             while double_meter1 != double_meter_cap:
                 double_meter1 -= 1
-    if dice == 'Double':
+    elif dice.lower() == 'double':
         if double_meter1 == 100:    
             print('DOUBLE ROLL!')
             time.sleep(1)
@@ -821,13 +821,13 @@ def P1DiceRoll():
             print("Can't use double roll.")
             time.sleep(2)
             P1DiceRoll()
-    if dice == 'Item':
+    elif dice.lower() == 'item':
         if item_use == 1:
             print('Select your item:', p1_items)
             item_select = input()
-            if item_select == 'Back':
+            if item_select.lower() == 'back':
                 P1DiceRoll()
-            elif item_select == 'Plus Apple':
+            elif item_select.lower() == 'plus apple':
                 if p1_items[1] == 'Plus Apple' or p1_items[2] == 'Plus Apple' or p1_items[3] == 'Plus Apple':
                     print('Player 1 used the Plus Apple!')
                     time.sleep(2)
@@ -853,7 +853,7 @@ def P1DiceRoll():
                     print("You don't have a Plus Apple!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'Golden Plus Apple':
+            elif item_select.lower() == 'golden plus apple':
                 if p1_items[1] == 'Golden Plus Apple' or p1_items[2] == 'Golden Plus Apple' or p1_items[3] == 'Golden Plus Apple':
                     print('Player 1 used the Golden Plus Apple!')
                     time.sleep(2)
@@ -879,7 +879,7 @@ def P1DiceRoll():
                     print("You don't have a Golden Plus Apple!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'Minus Pear':
+            elif item_select.lower() == 'minus pear':
                 if p1_items[1] == 'Minus Pear' or p1_items[2] == 'Minus Pear' or p1_items[3] == 'Minus Pear':
                     print('Player 1 used the Minus Pear!')
                     time.sleep(2)
@@ -945,7 +945,7 @@ def P1DiceRoll():
                     print("You don't have a Minus Pear!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'Golden Minus Pear':
+            elif item_select.lower() == 'golden minus pear':
                 if p1_items[1] == 'Golden Minus Pear' or p1_items[2] == 'Golden Minus Pear' or p1_items[3] == 'Golden Minus Pear':
                     print('Player 1 used the Golden Minus Pear!')
                     time.sleep(2)
@@ -1011,7 +1011,7 @@ def P1DiceRoll():
                     print("You don't have a Golden Minus Pear!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'Extra Die':
+            elif item_select.lower() == 'extra die':
                 if p1_items[1] == 'Extra Die' or p1_items[2] == 'Extra Die' or p1_items[3] == 'Extra Die':
                     print('Player 1 used the Extra Die!')
                     time.sleep(2)
@@ -1030,7 +1030,7 @@ def P1DiceRoll():
                     print("You don't have an Extra Die!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'Selection Die':
+            elif item_select.lower() == 'selection die':
                 if p1_items[1] == 'Selection Die' or p1_items[2] == 'Selection Die' or p1_items[3] == 'Selection Die':
                     print('Player 1 used the Selection Die!')
                     time.sleep(2)
@@ -1072,7 +1072,7 @@ def P1DiceRoll():
                     time.sleep(2)
                     item_use = 0
                     P1DiceRoll()
-            elif item_select == 'Swap Box':
+            elif item_select.lower() == 'swap box':
                 if p1_items[1] == 'Swap Box' or p1_items[2] == 'Swap Box' or p1_items[3] == 'Swap Box':
                     print('Player 1 used the Swap Box!')
                     time.sleep(2)
@@ -1113,7 +1113,7 @@ def P1DiceRoll():
                     print("You don't have a Swap Box!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'Great Snake':
+            elif item_select.lower() == 'great snake':
                 if p1_items[1] == 'Great Snake' or p1_items[2] == 'Great Snake' or p1_items[3] == 'Great Snake':
                     print('Player 1 used the Great Snake!')
                     time.sleep(2)
@@ -1156,7 +1156,7 @@ def P1DiceRoll():
                     print("You don't have a Great Snake!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'God Snake':
+            elif item_select.lower() == 'god snake':
                 if p1_items[1] == 'God Snake' or p1_items[2] == 'God Snake' or p1_items[3] == 'God Snake':
                     print('Player 1 used the God Snake!')
                     time.sleep(2)
@@ -1187,7 +1187,7 @@ def P1DiceRoll():
                     print("You don't have a God Snake!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'Double-or-Nothing Die':
+            elif item_select.lower() == 'double-or-nothing die':
                 if p1_items[1] == 'Double-or-Nothing Die' or p1_items[2] == 'Double-or-Nothing Die' or p1_items[3] == 'Double-or-Nothing Die':
                     print('Player 1 used the Double-or-Nothing Die!')
                     time.sleep(2)
@@ -1218,7 +1218,7 @@ def P1DiceRoll():
                     print("You don't have a Double-or-Nothing Die!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'Magic Ladder':
+            elif item_select.lower() == 'magic ladder':
                 if p1_items[1] == 'Magic Ladder' or p1_items[2] == 'Magic Ladder' or p1_items[3] == 'Magic Ladder':
                     print('Player 1 used the Magic Ladder!')
                     time.sleep(2)
@@ -1233,12 +1233,27 @@ def P1DiceRoll():
                     elif p1_items.index('Magic Ladder') == 3:
                         p1_items[3] = ''
                     item_use = 0
-                    P1DiceRoll()
+                    if player1pos in snakes:
+                        print('Uh-oh! You landed on a snake!')
+                        time.sleep(2)
+                        signal = 1
+                        snake()
+                    elif player1pos in ladders:
+                        print('Woo-hoo! You landed on a ladder!')
+                        time.sleep(2)
+                        signal = 1
+                        ladder()
+                    elif player1pos > goal:
+                        print('Ooh... you overshot that one!')
+                        player1pos -= dice_roll
+                        time.sleep(2)
+                    else:
+                        P1DiceRoll()
                 else:
                     print("You don't have a Magic Ladder!")
                     time.sleep(2)
                     P1DiceRoll()
-            elif item_select == 'Ultimate Fate':
+            elif item_select.lower() == 'ultimate fate':
                 if p1_items[1] == 'Ultimate Fate' or p1_items[2] == 'Ultimate Fate' or p1_items[3] == 'Ultimate Fate':
                     print('Player 1 used the Ultimate Fate!')
                     time.sleep(2)
@@ -1313,6 +1328,10 @@ def P1DiceRoll():
                     P1DiceRoll()
             else:
                 P1DiceRoll()
+    else:
+        print("We didn't get that... Try Again!")
+        time.sleep(2)
+        P1DiceRoll()
     if player1pos in snakes:
         print('Uh-oh! You landed on a snake!')
         time.sleep(2)
@@ -1336,7 +1355,7 @@ def P1DiceRoll():
             print('Whoa! You get to play an item game!')
             time.sleep(2)
             left_or_right = input('Left or Right?: ')
-            if left_or_right == 'Left' or left_or_right == 'left':
+            if left_or_right.lower() == 'left':
                 item_get = random.choice(['Plus Apple', 'Minus Pear', 'Golden Plus Apple', 'Golden Minus Pear', 'Selection Die', 'Extra Die'])
                 print('You recieved:', item_get)
                 if p1_items[1] == '':
@@ -1369,8 +1388,41 @@ def P1DiceRoll():
                         print('Hello,', p1_items[3])
                     else:
                         print('You threw the', item_get, 'away!')
-            if left_or_right == 'Right' or left_or_right == 'right':
+            elif left_or_right.lower() == 'right':
                 item_get = random.choice(['Swap Box', 'Great Snake', 'God Snake', 'Double-or-Nothing Die', 'Magic Ladder', 'Ultimate Fate'])
+                print('You recieved:', item_get)
+                if p1_items[1] == '':
+                    p1_items[1] = item_get
+                elif p1_items[2] == '':
+                    p1_items[2] = item_get
+                elif p1_items[3] == '':
+                    p1_items[3] = item_get
+                else:
+                    print('Uh oh! No more room!')
+                    time.sleep(1)
+                    print('Which item slot do you want to replace?')
+                    print(p1_items) 
+                    print('1, 2, or 3 (input anything else to toss item)')
+                    item_replace = int(input())
+                    if item_replace == 1:
+                        print('Goodbye,', p1_items[1])
+                        time.sleep(1)
+                        p1_items[1] = item_get
+                        print('Hello,', p1_items[1])
+                    elif item_replace == 2:
+                        print('Goodbye,', p1_items[2])
+                        time.sleep(1)
+                        p1_items[2] = item_get
+                        print('Hello,', p1_items[2])
+                    elif item_replace == 3:
+                        print('Goodbye,', p1_items[3])
+                        time.sleep(1)
+                        p1_items[3] = item_get
+                        print('Hello,', p1_items[3])
+                    else:
+                        print('You threw the', item_get, 'away!')
+            else:
+                item_get = random.choice(['Plus Apple', 'Minus Pear', 'Golden Plus Apple', 'Golden Minus Pear', 'Selection Die', 'Extra Die', 'Swap Box', 'Great Snake', 'God Snake', 'Double-or-Nothing Die', 'Magic Ladder', 'Ultimate Fate'])
                 print('You recieved:', item_get)
                 if p1_items[1] == '':
                     p1_items[1] = item_get
@@ -1460,7 +1512,7 @@ def P2DiceRoll():
                     dice = 'Single'
             else:
                 dice = 'Single'
-    if dice == 'Single':
+    if dice.lower() == 'single':
         dice_roll = random.choice(range(1, 7))
         print('The die rolled', dice_roll)
         time.sleep(1)
@@ -1498,7 +1550,7 @@ def P2DiceRoll():
         if double_meter2 > double_meter_cap:
             while double_meter2 != double_meter_cap:
                 double_meter2 -= 1
-    if dice == 'Double':
+    elif dice.lower() == 'double':
         if double_meter2 == 100:    
             print('DOUBLE ROLL!')
             time.sleep(1)
@@ -1526,9 +1578,9 @@ def P2DiceRoll():
             elif p2_status == 'Double':
                 dice_roll *= 2
                 p2_status = ''
-            elif p2_status == 'Half':
+            elif p1_status == 'Half':
                 dice_roll //= 2
-                p2_status = ''
+                p1_status = ''
             print('Player 2 moves', dice_roll, 'spaces!')
             player2pos += dice_roll
             time.sleep(1)
@@ -1539,16 +1591,16 @@ def P2DiceRoll():
             print("Can't use double roll.")
             time.sleep(2)
             P2DiceRoll()
-    if dice == 'Item':
+    elif dice.lower() == 'item':
         if item_use == 1:
             print('Select your item:', p2_items)
             if players >= 2:
                 item_select = input()
             else:
                 item_select = random.choice(p2_items)
-            if item_select == 'Back':
+            if item_select.lower() == 'back':
                 P2DiceRoll()
-            elif item_select == 'Plus Apple':
+            elif item_select.lower() == 'plus apple':
                 if p2_items[1] == 'Plus Apple' or p2_items[2] == 'Plus Apple' or p2_items[3] == 'Plus Apple':
                     print('Player 2 used the Plus Apple!')
                     time.sleep(2)
@@ -1574,7 +1626,7 @@ def P2DiceRoll():
                     print("You don't have a Plus Apple!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'Golden Plus Apple':
+            elif item_select.lower() == 'golden plus apple':
                 if p2_items[1] == 'Golden Plus Apple' or p2_items[2] == 'Golden Plus Apple' or p2_items[3] == 'Golden Plus Apple':
                     print('Player 2 used the Golden Plus Apple!')
                     time.sleep(2)
@@ -1600,7 +1652,7 @@ def P2DiceRoll():
                     print("You don't have a Golden Plus Apple!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'Minus Pear':
+            elif item_select.lower() == 'minus pear':
                 if p2_items[1] == 'Minus Pear' or p2_items[2] == 'Minus Pear' or p2_items[3] == 'Minus Pear':
                     print('Player 2 used the Minus Pear!')
                     time.sleep(2)
@@ -1669,7 +1721,7 @@ def P2DiceRoll():
                     print("You don't have a Minus Pear!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'Golden Minus Pear':
+            elif item_select.lower() == 'golden minus pear':
                 if p2_items[1] == 'Golden Minus Pear' or p2_items[2] == 'Golden Minus Pear' or p2_items[3] == 'Golden Minus Pear':
                     print('Player 2 used the Golden Minus Pear!')
                     time.sleep(2)
@@ -1738,7 +1790,7 @@ def P2DiceRoll():
                     print("You don't have a Golden Minus Pear!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'Extra Die':
+            elif item_select.lower() == 'extra die':
                 if p2_items[1] == 'Extra Die' or p2_items[2] == 'Extra Die' or p2_items[3] == 'Extra Die':
                     print('Player 2 used the Extra Die!')
                     time.sleep(2)
@@ -1757,7 +1809,7 @@ def P2DiceRoll():
                     print("You don't have an Extra Die!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'Selection Die':
+            elif item_select.lower() == 'selection die':
                 if p2_items[1] == 'Selection Die' or p2_items[2] == 'Selection Die' or p2_items[3] == 'Selection Die':
                     print('Player 2 used the Selection Die!')
                     time.sleep(2)
@@ -1802,7 +1854,7 @@ def P2DiceRoll():
                     time.sleep(2)
                     item_use = 0
                     P2DiceRoll()
-            elif item_select == 'Swap Box':
+            elif item_select.lower() == 'swap box':
                 if p2_items[1] == 'Swap Box' or p2_items[2] == 'Swap Box' or p2_items[3] == 'Swap Box':
                     print('Player 2 used the Swap Box!')
                     time.sleep(2)
@@ -1843,7 +1895,7 @@ def P2DiceRoll():
                     print("You don't have a Swap Box!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'Great Snake':
+            elif item_select.lower() == 'great snake':
                 if p2_items[1] == 'Great Snake' or p2_items[2] == 'Great Snake' or p2_items[3] == 'Great Snake':
                     print('Player 2 used the Great Snake!')
                     time.sleep(2)
@@ -1886,7 +1938,7 @@ def P2DiceRoll():
                     print("You don't have a Great Snake!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'God Snake':
+            elif item_select.lower() == 'god snake':
                 if p2_items[1] == 'God Snake' or p2_items[2] == 'God Snake' or p2_items[3] == 'God Snake':
                     print('Player 2 used the God Snake!')
                     time.sleep(2)
@@ -1917,7 +1969,7 @@ def P2DiceRoll():
                     print("You don't have a God Snake!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'Double-or-Nothing Die':
+            elif item_select.lower() == 'double-or-nothing die':
                 if p2_items[1] == 'Double-or-Nothing Die' or p2_items[2] == 'Double-or-Nothing Die' or p2_items[3] == 'Double-or-Nothing Die':
                     print('Player 1 used the Double-or-Nothing Die!')
                     time.sleep(2)
@@ -1949,7 +2001,7 @@ def P2DiceRoll():
                     print("You don't have a Double-or-Nothing Die!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'Magic Ladder':
+            elif item_select.lower() == 'magic ladder':
                 if p2_items[1] == 'Magic Ladder' or p2_items[2] == 'Magic Ladder' or p2_items[3] == 'Magic Ladder':
                     print('Player 2 used the Magic Ladder!')
                     time.sleep(2)
@@ -1964,12 +2016,27 @@ def P2DiceRoll():
                     elif p2_items.index('Magic Ladder') == 3:
                         p2_items[3] = ''
                     item_use = 0
-                    P2DiceRoll()
+                    if player2pos in snakes:
+                        print('Uh-oh! You landed on a snake!')
+                        time.sleep(2)
+                        signal = 2
+                        snake()
+                    elif player2pos in ladders:
+                        print('Woo-hoo! You landed on a ladder!')
+                        time.sleep(2)
+                        signal = 2
+                        ladder()
+                    elif player2pos > goal:
+                        print('Ooh... you overshot that one!')
+                        player2pos -= dice_roll
+                        time.sleep(2)
+                    else:
+                        P2DiceRoll()
                 else:
                     print("You don't have a Magic Ladder!")
                     time.sleep(2)
                     P2DiceRoll()
-            elif item_select == 'Ultimate Fate':
+            elif item_select.lower() == 'ultimate fate':
                 if p2_items[1] == 'Ultimate Fate' or p2_items[2] == 'Ultimate Fate' or p2_items[3] == 'Ultimate Fate':
                     print('Player 2 used the Ultimate Fate!')
                     time.sleep(2)
@@ -2045,6 +2112,10 @@ def P2DiceRoll():
                     P2DiceRoll()
             else:
                 P2DiceRoll()
+    else:
+        print("We didn't get that... Try Again!")
+        time.sleep(2)
+        P2DiceRoll()
     if player2pos in snakes:
         print('Uh-oh! You landed on a snake!')
         time.sleep(2)
@@ -2107,7 +2178,43 @@ def P2DiceRoll():
                         print('Hello,', p2_items[3])
                     else:
                         print('You threw the', item_get, 'away!')
-            if left_or_right.lower() == 'right':
+            elif left_or_right.lower() == 'right':
+                item_get = random.choice(['Plus Apple', 'Minus Pear', 'Golden Plus Apple', 'Golden Minus Pear', 'Selection Die', 'Extra Die', 'Swap Box', 'Great Snake', 'God Snake', 'Double-or-Nothing Die', 'Magic Ladder', 'Ultimate Fate'])
+                print('You recieved:', item_get)
+                if p2_items[1] == '':
+                    p2_items[1] = item_get
+                elif p2_items[2] == '':
+                    p2_items[2] = item_get
+                elif p2_items[3] == '':
+                    p2_items[3] = item_get
+                else:
+                    print('Uh oh! No more room!')
+                    time.sleep(1)
+                    if players >= 2:
+                        print('Which item slot do you want to replace?')
+                        print(p2_items)
+                        print('1, 2, or 3 (input anything else to toss item)')
+                        item_replace = int(input())
+                    else:
+                        item_replace = random.choice(range(1, 4))
+                    if item_replace == 1:
+                        print('Goodbye,', p2_items[1])
+                        time.sleep(1)
+                        p2_items[1] = item_get
+                        print('Hello,', p2_items[1])
+                    elif item_replace == 2:
+                        print('Goodbye,', p2_items[2])
+                        time.sleep(1)
+                        p2_items[2] = item_get
+                        print('Hello,', p2_items[2])
+                    elif item_replace == 3:
+                        print('Goodbye,', p2_items[3])
+                        time.sleep(1)
+                        p2_items[3] = item_get
+                        print('Hello,', p2_items[3])
+                    else:
+                        print('You threw the', item_get, 'away!')
+            else:
                 item_get = random.choice(['Swap Box', 'Great Snake', 'God Snake', 'Double-or-Nothing Die', 'Magic Ladder', 'Ultimate Fate'])
                 print('You recieved:', item_get)
                 if p2_items[1] == '':
@@ -2201,7 +2308,7 @@ def P3DiceRoll():
                     dice = 'Single'
             else:
                 dice = 'Single'
-    if dice == 'Single':
+    if dice.lower() == 'single':
         dice_roll = random.choice(range(1, 7))
         print('The die rolled', dice_roll)
         time.sleep(1)
@@ -2223,8 +2330,8 @@ def P3DiceRoll():
             dice_roll += ex_dice_roll
             p3_status = ''
             time.sleep(1)
-        elif p3_status == 'Half':
-            dice_roll //= 2
+        elif p3_status == 'Double':
+            dice_roll *= 2
             p3_status = ''
         print('Player 3 moves', dice_roll, 'spaces!')
         player3pos += dice_roll
@@ -2236,7 +2343,7 @@ def P3DiceRoll():
         if double_meter3 > double_meter_cap:
             while double_meter3 != double_meter_cap:
                 double_meter3 -= 1
-    if dice == 'Double':
+    elif dice.lower() == 'double':
         if double_meter3 == 100:    
             print('DOUBLE ROLL!')
             time.sleep(1)
@@ -2264,9 +2371,6 @@ def P3DiceRoll():
             elif p3_status == 'Double':
                 dice_roll *= 2
                 p3_status = ''
-            elif p3_status == 'Half':
-                dice_roll //= 2
-                p3_status = ''
             print('Player 3 moves', dice_roll, 'spaces!')
             player3pos += dice_roll
             time.sleep(1)
@@ -2277,16 +2381,16 @@ def P3DiceRoll():
             print("Can't use double roll.")
             time.sleep(2)
             P3DiceRoll()
-    if dice == 'Item':
+    elif dice.lower() == 'item':
         if item_use == 1:
             print('Select your item:', p3_items)
             if players >= 3:
                 item_select = input()
             else:
                 item_select = random.choice(p3_items)
-            if item_select == 'Back':
+            if item_select.lower() == 'back':
                 P3DiceRoll()
-            elif item_select == 'Plus Apple':
+            elif item_select.lower() == 'plus apple':
                 if p3_items[1] == 'Plus Apple' or p3_items[2] == 'Plus Apple' or p3_items[3] == 'Plus Apple':
                     print('Player 3 used the Plus Apple!')
                     time.sleep(2)
@@ -2312,7 +2416,7 @@ def P3DiceRoll():
                     print("You don't have a Plus Apple!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'Golden Plus Apple':
+            elif item_select.lower() == 'golden plus apple':
                 if p3_items[1] == 'Golden Plus Apple' or p3_items[2] == 'Golden Plus Apple' or p3_items[3] == 'Golden Plus Apple':
                     print('Player 3 used the Golden Plus Apple!')
                     time.sleep(2)
@@ -2338,7 +2442,7 @@ def P3DiceRoll():
                     print("You don't have a Golden Plus Apple!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'Minus Pear':
+            elif item_select.lower() == 'minus pear':
                 if p3_items[1] == 'Minus Pear' or p3_items[2] == 'Minus Pear' or p3_items[3] == 'Minus Pear':
                     print('Player 3 used the Minus Pear!')
                     time.sleep(2)
@@ -2407,7 +2511,7 @@ def P3DiceRoll():
                     print("You don't have a Minus Pear!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'Golden Minus Pear':
+            elif item_select.lower() == 'golden minus pear':
                 if p3_items[1] == 'Golden Minus Pear' or p3_items[2] == 'Golden Minus Pear' or p3_items[3] == 'Golden Minus Pear':
                     print('Player 3 used the Golden Minus Pear!')
                     time.sleep(2)
@@ -2476,7 +2580,7 @@ def P3DiceRoll():
                     print("You don't have a Golden Minus Pear!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'Extra Die':
+            elif item_select.lower() == 'extra die':
                 if p3_items[1] == 'Extra Die' or p3_items[2] == 'Extra Die' or p3_items[3] == 'Extra Die':
                     print('Player 3 used the Extra Die!')
                     time.sleep(2)
@@ -2495,7 +2599,7 @@ def P3DiceRoll():
                     print("You don't have an Extra Die!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'Selection Die':
+            elif item_select.lower() == 'selection die':
                 if p3_items[1] == 'Selection Die' or p3_items[2] == 'Selection Die' or p3_items[3] == 'Selection Die':
                     print('Player 3 used the Selection Die!')
                     time.sleep(2)
@@ -2540,7 +2644,7 @@ def P3DiceRoll():
                     time.sleep(2)
                     item_use = 0
                     P3DiceRoll()
-            elif item_select == 'Swap Box':
+            elif item_select.lower() == 'swap box':
                 if p3_items[1] == 'Swap Box' or p3_items[2] == 'Swap Box' or p3_items[3] == 'Swap Box':
                     print('Player 3 used the Swap Box!')
                     time.sleep(2)
@@ -2581,7 +2685,7 @@ def P3DiceRoll():
                     print("You don't have a Swap Box!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'Great Snake':
+            elif item_select.lower() == 'great snake':
                 if p3_items[1] == 'Great Snake' or p3_items[2] == 'Great Snake' or p3_items[3] == 'Great Snake':
                     print('Player 3 used the Great Snake!')
                     time.sleep(2)
@@ -2624,7 +2728,7 @@ def P3DiceRoll():
                     print("You don't have a Great Snake!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'God Snake':
+            elif item_select.lower() == 'god snake':
                 if p3_items[1] == 'God Snake' or p3_items[2] == 'God Snake' or p3_items[3] == 'God Snake':
                     print('Player 3 used the God Snake!')
                     time.sleep(2)
@@ -2655,7 +2759,7 @@ def P3DiceRoll():
                     print("You don't have a God Snake!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'Double-or-Nothing Die':
+            elif item_select.lower() == 'double-or-nothing die':
                 if p3_items[1] == 'Double-or-Nothing Die' or p3_items[2] == 'Double-or-Nothing Die' or p3_items[3] == 'Double-or-Nothing Die':
                     print('Player 3 used the Double-or-Nothing Die!')
                     time.sleep(2)
@@ -2687,7 +2791,7 @@ def P3DiceRoll():
                     print("You don't have a Double-or-Nothing Die!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'Magic Ladder':
+            elif item_select.lower() == 'magic ladder':
                 if p3_items[1] == 'Magic Ladder' or p3_items[2] == 'Magic Ladder' or p3_items[3] == 'Magic Ladder':
                     print('Player 3 used the Magic Ladder!')
                     time.sleep(2)
@@ -2702,12 +2806,27 @@ def P3DiceRoll():
                     elif p3_items.index('Magic Ladder') == 3:
                         p3_items[3] = ''
                     item_use = 0
-                    P3DiceRoll()
+                    if player3pos in snakes:
+                        print('Uh-oh! You landed on a snake!')
+                        time.sleep(2)
+                        signal = 3
+                        snake()
+                    elif player3pos in ladders:
+                        print('Woo-hoo! You landed on a ladder!')
+                        time.sleep(2)
+                        signal = 3
+                        ladder()
+                    elif player3pos > goal:
+                        print('Ooh... you overshot that one!')
+                        player3pos -= dice_roll
+                        time.sleep(2)
+                    else:
+                        P3DiceRoll()
                 else:
                     print("You don't have a Magic Ladder!")
                     time.sleep(2)
                     P3DiceRoll()
-            elif item_select == 'Ultimate Fate':
+            elif item_select.lower() == 'ultimate fate':
                 if p3_items[1] == 'Ultimate Fate' or p3_items[2] == 'Ultimate Fate' or p3_items[3] == 'Ultimate Fate':
                     print('Player 3 used the Ultimate Fate!')
                     time.sleep(2)
@@ -2783,6 +2902,10 @@ def P3DiceRoll():
                     P3DiceRoll()
             else:
                 P3DiceRoll()
+    else:
+        print("We didn't get that... Try Again!")
+        time.sleep(2)
+        P3DiceRoll()
     if player3pos in snakes:
         print('Uh-oh! You landed on a snake!')
         time.sleep(2)
@@ -2845,8 +2968,44 @@ def P3DiceRoll():
                         print('Hello,', p3_items[3])
                     else:
                         print('You threw the', item_get, 'away!')
-            if left_or_right.lower() == 'right':
+            elif left_or_right.lower() == 'right':
                 item_get = random.choice(['Swap Box', 'Great Snake', 'God Snake', 'Double-or-Nothing Die', 'Magic Ladder', 'Ultimate Fate'])
+                print('You recieved:', item_get)
+                if p3_items[1] == '':
+                    p3_items[1] = item_get
+                elif p3_items[2] == '':
+                    p3_items[2] = item_get
+                elif p3_items[3] == '':
+                    p3_items[3] = item_get
+                else:
+                    print('Uh oh! No more room!')
+                    time.sleep(1)
+                    if players >= 3:
+                        print('Which item slot do you want to replace?')
+                        print(p3_items)
+                        print('1, 2, or 3 (input anything else to toss item)')
+                        item_replace = int(input())
+                    else:
+                        item_replace = random.choice(range(1, 4))
+                    if item_replace == 1:
+                        print('Goodbye,', p3_items[1])
+                        time.sleep(1)
+                        p3_items[1] = item_get
+                        print('Hello,', p3_items[1])
+                    elif item_replace == 2:
+                        print('Goodbye,', p3_items[2])
+                        time.sleep(1)
+                        p3_items[2] = item_get
+                        print('Hello,', p3_items[2])
+                    elif item_replace == 3:
+                        print('Goodbye,', p3_items[3])
+                        time.sleep(1)
+                        p3_items[3] = item_get
+                        print('Hello,', p3_items[3])
+                    else:
+                        print('You threw the', item_get, 'away!')
+            else:
+                item_get = random.choice(['Plus Apple', 'Minus Pear', 'Golden Plus Apple', 'Golden Minus Pear', 'Selection Die', 'Extra Die', 'Swap Box', 'Great Snake', 'God Snake', 'Double-or-Nothing Die', 'Magic Ladder', 'Ultimate Fate'])
                 print('You recieved:', item_get)
                 if p3_items[1] == '':
                     p3_items[1] = item_get
@@ -2939,7 +3098,7 @@ def P4DiceRoll():
                     dice = 'Single'
             else:
                 dice = 'Single'
-    if dice == 'Single':
+    if dice.lower() == 'single':
         dice_roll = random.choice(range(1, 7))
         print('The die rolled', dice_roll)
         time.sleep(1)
@@ -2964,9 +3123,6 @@ def P4DiceRoll():
         elif p4_status == 'Double':
             dice_roll *= 2
             p4_status = ''
-        elif p4_status == 'Half':
-            dice_roll //= 2
-            p4_status = ''
         print('Player 4 moves', dice_roll, 'spaces!')
         player4pos += dice_roll
         time.sleep(1)
@@ -2977,7 +3133,7 @@ def P4DiceRoll():
         if double_meter4 > double_meter_cap:
             while double_meter4 != double_meter_cap:
                 double_meter4 -= 1
-    if dice == 'Double':
+    elif dice.lower() == 'double':
         if double_meter4 == 100:    
             print('DOUBLE ROLL!')
             time.sleep(1)
@@ -3005,9 +3161,6 @@ def P4DiceRoll():
             elif p4_status == 'Double':
                 dice_roll *= 2
                 p4_status = ''
-            elif p4_status == 'Half':
-                dice_roll //= 2
-                p4_status = ''
             print('Player 4 moves', dice_roll, 'spaces!')
             player4pos += dice_roll
             time.sleep(1)
@@ -3018,16 +3171,16 @@ def P4DiceRoll():
             print("Can't use double roll.")
             time.sleep(2)
             P4DiceRoll()
-    if dice == 'Item':
+    elif dice.lower() == 'item':
         if item_use == 1:
             print('Select your item:', p4_items)
             if players >= 4:
                 item_select = input()
             else:
                 item_select = random.choice(p4_items)
-            if item_select == 'Back':
+            if item_select.lower() == 'back':
                 P4DiceRoll()
-            elif item_select == 'Plus Apple':
+            elif item_select.lower() == 'plus apple':
                 if p4_items[1] == 'Plus Apple' or p4_items[2] == 'Plus Apple' or p4_items[3] == 'Plus Apple':
                     print('Player 4 used the Plus Apple!')
                     time.sleep(2)
@@ -3053,7 +3206,7 @@ def P4DiceRoll():
                     print("You don't have a Plus Apple!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'Golden Plus Apple':
+            elif item_select.lower() == 'golden plus apple':
                 if p4_items[1] == 'Golden Plus Apple' or p4_items[2] == 'Golden Plus Apple' or p4_items[3] == 'Golden Plus Apple':
                     print('Player 4 used the Golden Plus Apple!')
                     time.sleep(2)
@@ -3079,7 +3232,7 @@ def P4DiceRoll():
                     print("You don't have a Golden Plus Apple!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'Minus Pear':
+            elif item_select.lower() == 'minus pear':
                 if p4_items[1] == 'Minus Pear' or p4_items[2] == 'Minus Pear' or p4_items[3] == 'Minus Pear':
                     print('Player 4 used the Minus Pear!')
                     time.sleep(2)
@@ -3148,7 +3301,7 @@ def P4DiceRoll():
                     print("You don't have a Minus Pear!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'Golden Minus Pear':
+            elif item_select.lower() == 'golden minus pear':
                 if p4_items[1] == 'Golden Minus Pear' or p4_items[2] == 'Golden Minus Pear' or p4_items[3] == 'Golden Minus Pear':
                     print('Player 4 used the Golden Minus Pear!')
                     time.sleep(2)
@@ -3217,7 +3370,7 @@ def P4DiceRoll():
                     print("You don't have a Golden Minus Pear!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'Extra Die':
+            elif item_select.lower() == 'extra die':
                 if p4_items[1] == 'Extra Die' or p4_items[2] == 'Extra Die' or p4_items[3] == 'Extra Die':
                     print('Player 4 used the Extra Die!')
                     time.sleep(2)
@@ -3236,7 +3389,7 @@ def P4DiceRoll():
                     print("You don't have an Extra Die!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'Selection Die':
+            elif item_select.lower() == 'selection die':
                 if p4_items[1] == 'Selection Die' or p4_items[2] == 'Selection Die' or p4_items[3] == 'Selection Die':
                     print('Player 4 used the Selection Die!')
                     time.sleep(2)
@@ -3281,7 +3434,7 @@ def P4DiceRoll():
                     time.sleep(2)
                     item_use = 0
                     P4DiceRoll()
-            elif item_select == 'Swap Box':
+            elif item_select.lower() == 'swap box':
                 if p4_items[1] == 'Swap Box' or p4_items[2] == 'Swap Box' or p4_items[3] == 'Swap Box':
                     print('Player 4 used the Swap Box!')
                     time.sleep(2)
@@ -3322,7 +3475,7 @@ def P4DiceRoll():
                     print("You don't have a Swap Box!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'Great Snake':
+            elif item_select.lower() == 'great snake':
                 if p4_items[1] == 'Great Snake' or p4_items[2] == 'Great Snake' or p4_items[3] == 'Great Snake':
                     print('Player 4 used the Great Snake!')
                     time.sleep(2)
@@ -3365,7 +3518,7 @@ def P4DiceRoll():
                     print("You don't have a Great Snake!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'God Snake':
+            elif item_select.lower() == 'god snake':
                 if p4_items[1] == 'God Snake' or p4_items[2] == 'God Snake' or p4_items[3] == 'God Snake':
                     print('Player 4 used the God Snake!')
                     time.sleep(2)
@@ -3396,7 +3549,7 @@ def P4DiceRoll():
                     print("You don't have a God Snake!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'Double-or-Nothing Die':
+            elif item_select.lower() == 'double-or-nothing die':
                 if p4_items[1] == 'Double-or-Nothing Die' or p4_items[2] == 'Double-or-Nothing Die' or p4_items[3] == 'Double-or-Nothing Die':
                     print('Player 4 used the Double-or-Nothing Die!')
                     time.sleep(2)
@@ -3428,7 +3581,7 @@ def P4DiceRoll():
                     print("You don't have a Double-or-Nothing Die!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'Magic Ladder':
+            elif item_select.lower() == 'magic ladder':
                 if p4_items[1] == 'Magic Ladder' or p4_items[2] == 'Magic Ladder' or p4_items[3] == 'Magic Ladder':
                     print('Player 4 used the Magic Ladder!')
                     time.sleep(2)
@@ -3443,12 +3596,27 @@ def P4DiceRoll():
                     elif p4_items.index('Magic Ladder') == 3:
                         p4_items[3] = ''
                     item_use = 0
-                    P4DiceRoll()
+                    if player4pos in snakes:
+                        print('Uh-oh! You landed on a snake!')
+                        time.sleep(2)
+                        signal = 4
+                        snake()
+                    elif player4pos in ladders:
+                        print('Woo-hoo! You landed on a ladder!')
+                        time.sleep(2)
+                        signal = 4
+                        ladder()
+                    if player4pos > goal:
+                        print('Ooh... you overshot that one!')
+                        player4pos -= dice_roll
+                        time.sleep(2)
+                    else:
+                        P4DiceRoll()
                 else:
                     print("You don't have a Magic Ladder!")
                     time.sleep(2)
                     P4DiceRoll()
-            elif item_select == 'Ultimate Fate':
+            elif item_select.lower() == 'ultimate fate':
                 if p4_items[1] == 'Ultimate Fate' or p4_items[2] == 'Ultimate Fate' or p4_items[3] == 'Ultimate Fate':
                     print('Player 4 used the Ultimate Fate!')
                     time.sleep(2)
@@ -3524,6 +3692,10 @@ def P4DiceRoll():
                     P4DiceRoll()
             else:
                 P4DiceRoll()
+    else:
+        print("We didn't get that... Try Again!")
+        time.sleep(2)
+        P4DiceRoll()
     if player4pos in snakes:
         print('Uh-oh! You landed on a snake!')
         time.sleep(2)
@@ -3586,8 +3758,44 @@ def P4DiceRoll():
                         print('Hello,', p4_items[3])
                     else:
                         print('You threw the', item_get, 'away!')
-            if left_or_right.lower() == 'right':
+            elif left_or_right.lower() == 'right':
                 item_get = random.choice(['Swap Box', 'Great Snake', 'God Snake', 'Double-or-Nothing Die', 'Magic Ladder', 'Ultimate Fate'])
+                print('You recieved:', item_get)
+                if p4_items[1] == '':
+                    p4_items[1] = item_get
+                elif p4_items[2] == '':
+                    p4_items[2] = item_get
+                elif p4_items[3] == '':
+                    p4_items[3] = item_get
+                else:
+                    print('Uh oh! No more room!')
+                    time.sleep(1)
+                    if players >= 4:
+                        print('Which item slot do you want to replace?')
+                        print(p4_items)
+                        print('1, 2, or 3 (input anything else to toss item)')
+                        item_replace = int(input())
+                    else:
+                        item_replace = random.choice(range(1, 4))
+                    if item_replace == 1:
+                        print('Goodbye,', p4_items[1])
+                        time.sleep(1)
+                        p4_items[1] = item_get
+                        print('Hello,', p4_items[1])
+                    elif item_replace == 2:
+                        print('Goodbye,', p4_items[2])
+                        time.sleep(1)
+                        p4_items[2] = item_get
+                        print('Hello,', p4_items[2])
+                    elif item_replace == 3:
+                        print('Goodbye,', p4_items[3])
+                        time.sleep(1)
+                        p4_items[3] = item_get
+                        print('Hello,', p4_items[3])
+                    else:
+                        print('You threw the', item_get, 'away!')
+            else:
+                item_get = random.choice(['Plus Apple', 'Minus Pear', 'Golden Plus Apple', 'Golden Minus Pear', 'Selection Die', 'Extra Die', 'Swap Box', 'Great Snake', 'God Snake', 'Double-or-Nothing Die', 'Magic Ladder', 'Ultimate Fate'])
                 print('You recieved:', item_get)
                 if p4_items[1] == '':
                     p4_items[1] = item_get

@@ -1,3 +1,12 @@
+Version 1.1.0 - March 10, 2022
+- Gameplay Fixes
+- Allows players to not get their turn skipped if nothing is inputted
+- Allows players to not miss out on items if nothing is inputted
+- Magic Ladder item now check your space for a snake, ladder, or if you overshot the goal.
+	~ If none of these conditions are met, you can roll normally after
+- Added lowercase compatibility
+___________________________________________________________
+
 Version 1.0.0 - March 2, 2022
 
 - Official release
