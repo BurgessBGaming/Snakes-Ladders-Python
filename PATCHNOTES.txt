@@ -1,45 +1,52 @@
+Version 1.1.1 - March 16, 2022
+   Minor Changes
+- Computer players will no longer fail to use items if they decide to use them
+- The back button in the item list is now removed
++ Players can now type anything other than items (or press enter) to exit the item list
++ Edited style of the patchnotes
+___________________________________________________________
 Version 1.1.0 - March 10, 2022
-- Gameplay Fixes
+   Gameplay Fixes
 - Allows players to not get their turn skipped if nothing is inputted
 - Allows players to not miss out on items if nothing is inputted
-- Magic Ladder item now check your space for a snake, ladder, or if you overshot the goal.
++ Magic Ladder item now check your space for a snake, ladder, or if you overshot the goal.
 	~ If none of these conditions are met, you can roll normally after
-- Added lowercase compatibility
++ Added lowercase compatibility
 ___________________________________________________________
 
-Version 1.0.0 - March 2, 2022
+Version 1.0.0 - March 9, 2022
 
-- Official release
+   Official release
 
-- Added Basic Gamemode
++ Added Basic Gamemode
 
-- Added Boards 1-3
++ Added Boards 1-3
 
-- Added player AI
++ Added player AI
 
-- Added Plus Apple Item
++ Added Plus Apple Item
 
-- Added Golden Plus Apple Item
++ Added Golden Plus Apple Item
 
-- Added Minus Pear Item
++ Added Minus Pear Item
 
-- Added Golden Minus Pear Item
++ Added Golden Minus Pear Item
 
-- Added Extra Die Item
++ Added Extra Die Item
 
-- Added Selection Die Item
++ Added Selection Die Item
 
-- Added Swap Box Item
++ Added Swap Box Item
 
-- Added Great Snake Item
++ Added Great Snake Item
 
-- Added God Snake Item
++ Added God Snake Item
 
-- Added Double-or-Nothing Die Item
++ Added Double-or-Nothing Die Item
 
-- Added Magic Ladder Item
++ Added Magic Ladder Item
 
-- Added Ultimate Fate Item
-- Added Shameless Plug
++ Added Ultimate Fate Item
++ Added Shameless Plug
 - Removed Xx_T0MAH4WK_xX
 ___________________________________________________________
